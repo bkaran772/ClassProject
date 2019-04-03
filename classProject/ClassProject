@@ -1,0 +1,35 @@
+insert into studentsuntitled values ("Mary", "101");
+insert into studentsuntitled values ("Steave", "102");
+insert into studentsuntitled values ("Jordan", "103");
+insert into studentsuntitled values ("Lisa", "104");
+insert into studentsuntitled values ("Mike", "105");
+insert into studentsuntitled values ("Bill", "106");
+insert into studentsuntitled values ("Polly", "107");
+insert into studentsuntitled values ("Jenna", "108");
+insert into studentsuntitled values ("Mitch", "109");
+insert into studentsuntitled values ("David", "110");
+
+
+insert into classes values ("Java", "B230", "MON_AM", "1103");
+insert into classes values ("Csharp", "B122", "Tue_PM", "1247");
+insert into classes values ("Math", "A506", "WED_EVE", "1389");
+insert into classes values ("Database", "B123", "THU_PM", "1455");
+insert into classes values ("Progmgt", "B125", "FRI_PM", "1203");
+insert into classes values ("EmergTech", "B122", "FRI_EVE", "1158");
+insert into classes values ("CSharp", "B125", "FRI_AM", "1451");
+insert into classes values ("Math", "B111", "WED_AM", "1673");
+
+
+insert into Enrollments values ("101", "1103");
+insert into Enrollments values ("101", "1247");
+insert into Enrollments values ("102", "1389");
+insert into Enrollments values ("102", "1455");
+insert into Enrollments values ("103", "1203");
+insert into Enrollments values ("103", "1158");
+insert into Enrollments values ("104", "1451");
+insert into Enrollments values ("104", "1673");
+
+
+Select studentsuntitled.studentname,studentsuntitled.studentid,classes.classname,classes.datetime,classes.classid
+from studentsuntitled,classes,enrollments
+where studentsuntitled.studentid=enrollments.studentid and classes.classid=enrollments.classid
